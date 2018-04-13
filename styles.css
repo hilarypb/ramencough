@@ -25,24 +25,43 @@ header {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	border: 3px solid black;
+	/*border: 3px solid black;*/
+	position: relative;
+}
+
+.container2 {
+	max-width: 28%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	/*border: 3px solid black;*/
 }
 
 h1 {
 	width: 28%;
-	border: 3px solid black;
+	/*border: 3px solid black;*/
 	background: rgba(255, 255, 255, 0.3);
 }
 
 .title {
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	font-size: 44px;
 	text-align: center;
 }
 
-h2 {
-	border: solid 3px black;
-	width: 28%;
+.button {
+	margin: 0 auto;
+	border: solid 1px #E44C32;
+	width: 30%;
 	text-align: center;
-	background: rgba(255, 255, 255, 0.3);
+	color: white;
+	background: rgba(228, 76, 50, 0.9);
+	/*background: rgba(64, 139, 197, 0.9);
+*/	padding: 10px;
+	border-radius: 300px;
+	font-size: 12px;
+}
+
+.button:hover {
+	background: rgba(228, 76, 50, 1);
 }
