@@ -1,0 +1,56 @@
+body, html {
+	height: 100%;
+	width: 100%;
+	font-family: 'Lato', sans-serif;
+	color: black;
+	background-color: #f4f4f4;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.side-menu {
+	height: 100%;
+	width: 240px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #f4f4f4;
+	overflow-x: hidden;
+	padding-top: 60px;
+	border: solid black;
+}
+
+.side-menu a, #accordion-menu a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 22px;
+	color: darkgrey;
+	display: block;
+	overflow-x: hidden;
+}
+
+#main-body {
+	padding-left: 240px;
+	z-index: 1;
+}
+
+#accordion-menu {
+	text-align: center;
+	z-index: 1;
+	border: solid black;
+}
+
+@media only screen and (min-width:600px) {
+	#accordion-menu {display: none}
+}
+
+@media screen and (max-width:600px) {
+	.side-menu {display:none}
+	#main-body {padding-left: 0;}
+}
+
+
+
+
+
