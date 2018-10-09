@@ -1,0 +1,133 @@
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+	width: 100%;
+	font-family: 'Lato', sans-serif;
+	color: black;
+	background-color: #f4f4f4;
+	box-sizing: border-box;
+	overflow: hidden;
+	border-left: 4px solid #75B09C;
+	border-right: 4px solid #75B09C;
+}
+
+.header {
+	padding: 30px 15px;
+	border: 2px solid black;
+}
+
+.column {
+	float: left;
+	padding: 10px;
+	border: 2px solid black;
+}
+
+.sidenav {
+	width: 15%;
+	border: 2px solid black;
+	z-index: 1;
+	overflow-x: hidden;
+}
+
+.column.mainleft {
+	width: 42.5%;
+}
+
+.column.mainright {
+	width: 42.5%;
+}
+
+.links a {
+	display: block;
+	padding: 8px 8px 8px 12px;
+	text-decoration: none;
+	font-size: 18px;
+	color: inherit;
+	overflow-x: hidden;
+}
+
+.icon {
+	position: fixed;
+	float: right;
+	top: 45px;
+	right: 3px;
+	transform: translate(-50%,-50%);
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	border: 2px solid black;
+}
+
+.hamburger {
+	width: 30px;
+	height: 4px;
+	background: #000;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	box-shadow: 0 2px 5px rgba(0,0,0,.1);
+	transition: .5s;
+}
+
+.hamburger:before,
+.hamburger:after {
+	content: '';
+	position: absolute;
+	width: 30px;
+	height: 4px;
+	background: #000;
+	box-shadow: 0 2px 5px rgba(0,0,0,.1);
+	transition: .5s;
+}
+
+.hamburger:before {
+	top: -10px;
+}
+
+.hamburger:after {
+	top: 10px;
+}
+
+.icon.active .hamburger {
+	background: #f4f4f4;
+	box-shadow: 0 2px 5px rgba(0,0,0,0);
+	transition: .5s;
+}
+
+.icon.active .hamburger:before {
+	top: 0;
+	transform: rotate(45deg);
+}
+
+.icon.active .hamburger:after {
+	top: 0;
+	transform: rotate(135deg);
+}
+
+.sidenav {
+	border: 2px solid black;
+}
+
+.mainbody {
+	border: 2px solid black;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media only screen and (min-width:600px) {
+	.icon {display: none}
+}
+
+@media screen and (max-width:600px) {
+	.column.sidenav {display: none}
+	.column.mainleft {width: 100%}
+	.column.mainright {width: 100%}
+}
